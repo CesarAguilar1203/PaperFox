@@ -7,16 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- From Uiverse.io by Yaya12085 --> 
-<!-- From Uiverse.io by Smit-Prajapati --> 
 <div class="container">
     <div class="heading">Acceso</div>
     <form action="" class="form">
-      <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
-      <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
-      <span class="forgot-password"><a href="#">Unete A Nosotros</a></span>
-      <input class="login-button" type="submit" value="Sign In">
-      
+      <input required="" class="input" type="email" name="email" id="email" placeholder="Correo">
+      <input required="" class="input" type="password" name="password" id="password" placeholder="Contraseña">
+      <span class="forgot-password"><a href="#" id="uneteLink">Únete A Nosotros</a></span>
+      <input class="login-button" type="submit" value="Entrar">
+      <script>
+  document.getElementById("uneteLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita el comportamiento por defecto del enlace
+    window.location.href = "form.html"; // Cambia por la ruta de tu archivo HTML
+  });
+</script>
     </form>
     <div class="social-account-container">
         <span class="title">Contactanos</span>
@@ -37,7 +40,6 @@
           </button>
         </div>
       </div>
-      <span class="agreement"><a href="#">Learn user licence agreement</a></span>
   </div>
 </body>
 </html>

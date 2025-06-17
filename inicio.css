@@ -1,0 +1,23 @@
+.mi-header {
+    background-color: #929fba;
+}
+
+.mi-header .nav-link,
+.mi-header .navbar-brand {
+    color: white !important;
+}
+
+    .pantalla-inicio {
+      height: 100vh;
+      background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(146, 159, 186, 0.7)),
+        url('https://kaycosas.com/wp-content/uploads/2024/05/Que-venden-en-las-papelerias.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2.5em;
+      font-family: sans-serif;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
