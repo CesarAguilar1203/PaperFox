@@ -8,6 +8,12 @@
     <title>Bootstrap Example</title>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="inicio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
   </head>
   <body>
 
@@ -26,19 +32,19 @@
     <div class="collapse navbar-collapse" id="myNavbar2">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="inicio.html">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sucursales.html">Sucursales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="quienes-somos.html">¿Quiénes somos?</a>
+          <a class="nav-link" href="quienes-somos.html">Objetivo Y Mision</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contacto.html">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-light px-3 py-1 ms-lg-2" href="login.html">Iniciar sesión</a>
+          <a class="nav-link btn btn-outline-light px-3 py-1 ms-lg-2" href="index.html">Iniciar sesión</a>
         </li>
       </ul>
 
@@ -180,51 +186,88 @@
       </script>
       <br><br><br>
   </section>
-<div class="container">
-  <div class="row">
-      <div class="col-md-12 text-center">
-          <div class="lc-block">
-              <span editable="inline" class="small mt-4 d-block">Acerca de</span>
-              <h2 editable="inline" class="display-2 mb-0"><b>Sobre Nosotros</b></h2>
-              <p editable="inline">Todo lo que necesitas saber para asociarte con PaperFox.</p>
-          </div>
-      </div>
+<section class="py-5 bg-light" id="sobre-nosotros">
+  <div class="container text-center mb-5">
+    <span class="text-muted small text-uppercase">Acerca de</span>
+    <h2 class="display-4 fw-bold text-primary">Sobre Nosotros</h2>
+    <p class="lead">Todo lo que necesitas saber para asociarte con <strong>PaperFox</strong>.</p>
   </div>
-  <div class="container py-5">
-      <div class="row m-4">
-          <div class="col-lg-5 align-self-center">
-              <div class="lc-block about-img-shape position-relative"> 
-                  <img class="img-fluid" src="bodega.png" alt="Bodega de papelería" data-aos="fade-right" data-aos-duration="1500">
-              </div>
-          </div>
-          <div class="col-lg-6 offset-lg-1 my-2 align-self-center">
-              <div class="lc-block">
-                  <div editable="rich">
-                      <h2>Más que solo papelería</h2>
-                      <p>En PaperFox ofrecemos una amplia gama de productos escolares, de oficina y artículos de regalo. Somos tu tienda de confianza, siempre lista para cubrir tus necesidades diarias con calidad, variedad y buen precio.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
 
-      <div class="row m-4">
-          <div class="col-lg-6 offset-lg-1 my-2 align-self-center">
-              <div class="lc-block">
-                  <div editable="rich">
-                      <h2>Tu proveedor aliado</h2>
-                      <p>Además de ser punto de venta, en PaperFox somos proveedores directos para escuelas, oficinas, empresas y pequeños negocios. Ofrecemos precios competitivos, entregas puntuales y atención personalizada para ayudarte a crecer.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-5 align-self-center">
-              <div class="lc-block about-img-shape position-relative"> 
-                  <img class="img-fluid" src="exterior.png" alt="Papelería proveedor" data-aos="fade-left" data-aos-duration="1500">
-              </div>
-          </div>
+  <div class="container">
+    <!-- Bloque 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-3 mb-md-0" data-aos="fade-right">
+        <img src="bodega.png" class="img-fluid rounded shadow" alt="Interior de bodega PaperFox">
       </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 class="fw-bold">
+          <i class="fas fa-boxes-stacked text-primary me-2"></i> Más que solo papelería
+        </h3>
+        <p class="text-muted">
+          En <strong>PaperFox</strong> creemos que la papelería no es solo venta de productos: es una experiencia completa de servicio, creatividad y solución. Nuestra misión va más allá de vender útiles escolares; buscamos ser un aliado confiable para estudiantes, empresas y emprendedores.
+        </p>
+        <ul class="text-muted">
+          <li>Productos de <strong>alta calidad</strong>.</li>
+          <li>Stock constante y actualizado.</li>
+          <li>Asesoría personalizada.</li>
+          <li>Precios accesibles para todos los bolsillos.</li>
+        </ul>
+        <p class="text-muted">Nuestro almacén está diseñado para garantizar rapidez, orden y seguridad en cada pedido.</p>
+      </div>
+    </div>
+
+    <!-- Bloque 2 -->
+    <div class="row align-items-center flex-md-row-reverse mb-5">
+      <div class="col-md-6 mb-3 mb-md-0" data-aos="fade-left">
+        <img src="exterior.png" class="img-fluid rounded shadow" alt="Exterior de la papelería PaperFox">
+      </div>
+      <div class="col-md-6" data-aos="fade-right">
+        <h3 class="fw-bold">
+          <i class="fas fa-truck-moving text-primary me-2"></i> Tu proveedor aliado
+        </h3>
+        <p class="text-muted">
+          Además de ser punto de venta, en <strong>PaperFox</strong> somos proveedores directos para escuelas, oficinas, empresas y pequeños negocios. Ofrecemos <strong>precios competitivos</strong>, entregas puntuales y atención personalizada para ayudarte a crecer.
+        </p>
+        <ul class="text-muted">
+          <li>Descuentos por volumen.</li>
+          <li>Facturación inmediata y formal.</li>
+          <li>Atención directa por teléfono, correo o WhatsApp.</li>
+          <li>Entregas programadas o urgentes.</li>
+        </ul>
+      </div>
+    </div>
+<br><br><br><br><br><br><br><br>
+    <!-- Bloque 3 -->
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h4 class="fw-bold text-primary">
+          <i class="fas fa-leaf me-2"></i> Nuestros Valores
+        </h4>
+        <p class="text-muted">
+          En PaperFox nos mueven principios que nos distinguen en el sector:
+        </p>
+        <div class="row mt-3">
+          <div class="col-md-3">
+            <i class="fas fa-handshake fa-2x text-success mb-2"></i>
+            <p><strong>Compromiso</strong><br>Cumplimos tiempos y promesas.</p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-check-circle fa-2x text-info mb-2"></i>
+            <p><strong>Honestidad</strong><br>Transparencia en productos y precios.</p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+            <p><strong>Innovación</strong><br>Siempre buscamos mejorar y actualizar.</p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-phone-volume fa-2x text-danger mb-2"></i>
+            <p><strong>Cercanía</strong><br>Estamos a un mensaje de distancia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
+</section>
 
 
 
@@ -286,21 +329,26 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
+<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+  <div class="p-3 bg-light rounded shadow-sm text-center">
+    <h6 class="text-uppercase mb-4 fw-bold text-primary">Síguenos</h6>
 
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i></a>
+    <!-- Facebook -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #3b5998" href="https://www.facebook.com/share/1KzjpuGK79/" role="button">
+      <i class="fab fa-facebook-f"></i>
+    </a>
 
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"
-          ><i class="fab fa-instagram"></i></a>
+    <!-- Instagram -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #ac2bac" href="https://www.instagram.com/cesar_aguilar948/" role="button">
+      <i class="fab fa-instagram"></i>
+    </a>
 
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <!-- Linkedin -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #0082ca" href="https://www.linkedin.com/in/cesar-aguilar-7097a0340/" role="button">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
       <!-- Grid column -->
     </div>
     <!--Grid row-->
@@ -320,5 +368,11 @@
   <!-- Footer -->
 </div>
 <!-- End of .container -->
+<script>
+  AOS.init({
+    duration: 1500, // puede ser cualquier valor
+    once: true // para que la animación ocurra solo una vez
+  });
+</script>
   </body>
 </html>

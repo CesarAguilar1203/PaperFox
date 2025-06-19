@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ventas - PaperFox</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+  body {
+    background: #f0f4f8;
+  }
+  .btn-vender {
+    background: linear-gradient(45deg, #1089d3, #12b1d1);
+    color: white;
+    font-weight: bold;
+  }
+  .btn-vender:hover {
+    background: linear-gradient(45deg, #0c6fb4, #0d9cb4);
+  }
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center animate__animated animate__bounceIn">
+        <img src="Logo.png" width="110" height="66" alt="Logo" class="me-2" />
+        <span class="fs-3 fw-bold animate__animated animate__fadeInRight">PAPERFOX</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="inicio.html" class="nav-link fs-5 fw-semibold text-white">Inicio</a></li>
+          <li class="nav-item"><a href="pdv.html" class="nav-link fs-5 fw-semibold text-white">Inventario</a></li>
+          <li class="nav-item"><a href="venta.html" class="nav-link fs-5 fw-semibold text-white active" aria-current="page">Ventas</a></li>
+                    <li class="nav-item"><a href="historial_ventas.html" class="nav-link fs-5 fw-semibold text-white">Historial de ventas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<section class="py-5 bg-light" id="respuestasContacto">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4 animate__animated animate__fadeInDown">📥 Respuestas del Formulario de Contacto</h2>
+
+    <div class="table-responsive animate__animated animate__fadeInUp">
+      <table class="table table-bordered table-striped table-hover shadow-sm">
+        <thead class="table-dark">
+          <tr>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Asunto</th>
+            <th>Mensaje</th>
+          </tr>
+        </thead>
+        <tbody id="tablaContactos">
+          <tr><td colspan="5" class="text-center">Cargando mensajes...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+  async function cargarContactos() {
+    try {
+      const res = await fetch('obtener_mensajes.php');
+      const contactos = await res.json();
+      const tbody = document.getElementById('tablaContactos');
+      tbody.innerHTML = '';
+
+      if (contactos.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">No hay mensajes registrados.</td></tr>';
+        return;
+      }
+
+      contactos.forEach(c => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${c.fecha_envio}</td>
+            <td>${c.nombre_completo}</td>
+            <td>${c.correo}</td>
+            <td>${c.asunto}</td>
+            <td>${c.mensaje}</td>
+          </tr>
+        `;
+      });
+    } catch (error) {
+      document.getElementById('tablaContactos').innerHTML = '<tr><td colspan="5" class="text-center text-danger">Error al cargar los datos.</td></tr>';
+    }
+  }
+
+  cargarContactos();
+</script>
+
+
+</body>
+</html>

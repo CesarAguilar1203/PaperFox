@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
@@ -26,13 +36,13 @@
           <a class="nav-link" href="sucursales.html">Sucursales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="quienes-somos.html">¿Quiénes somos?</a>
+          <a class="nav-link" href="quienes-somos.html">Objetivo Y Mision</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contacto.html">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-light px-3 py-1 ms-lg-2" href="login.html">Iniciar sesión</a>
+          <a class="nav-link btn btn-outline-light px-3 py-1 ms-lg-2" href="index.html">Iniciar sesión</a>
         </li>
       </ul>
 
@@ -59,9 +69,147 @@
     }
   </style>
 </nav>
+<section class="py-5 bg-light" id="objetivo-mision" style="min-height: 700px;">
+  <div class="container text-center mb-5">
+    <h2 class="display-5 fw-bold text-primary animate__animated animate__fadeInDown">🎯 Objetivo & Misión</h2>
+    <p class="text-muted fs-5 animate__animated animate__fadeInUp animate__delay-1s mb-4">Conoce qué nos mueve y hacia dónde vamos en PaperFox.</p>
+    
+    <!-- Modo claro/oscuro -->
+    <button id="modeToggle" class="btn btn-outline-primary mb-5">Modo Oscuro 🌙</button>
+  </div>
 
-</body>
-</html>
+  <!-- Tabs -->
+  <ul class="nav nav-tabs justify-content-center mb-5" id="objetivoMisionTab" role="tablist" style="gap: 1rem;">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active px-4 py-2 fs-5" id="objetivo-tab" data-bs-toggle="tab" data-bs-target="#objetivo" type="button" role="tab" aria-controls="objetivo" aria-selected="true">
+        🎯 Objetivo
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link px-4 py-2 fs-5" id="mision-tab" data-bs-toggle="tab" data-bs-target="#mision" type="button" role="tab" aria-controls="mision" aria-selected="false">
+        🚀 Misión
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="objetivoMisionTabContent">
+    <!-- Objetivo -->
+    <div class="tab-pane fade show active" id="objetivo" role="tabpanel" aria-labelledby="objetivo-tab" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 mb-4">
+          <p class="fs-5 text-secondary lh-lg">
+            Ofrecer una amplia variedad de productos de papelería de calidad, con atención personalizada y precios competitivos, facilitando la experiencia de compra para estudiantes, profesionales y empresas.
+          </p>
+        </div>
+
+        <div class="col-md-8 mb-5">
+          <!-- Barra de progreso -->
+          <label class="form-label fw-bold fs-6">Satisfacción de Clientes</label>
+          <div class="progress" style="height: 25px; border-radius: 15px;">
+            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+
+<div class="col-md-8 mb-5 text-center">
+  <a href="inicio.html" class="btn btn-success btn-lg px-5">Conócenos mas</a>
+</div>
+
+
+        <div class="col-md-8">
+          <video width="100%" height="auto" controls muted loop preload="metadata" class="rounded shadow-sm" style="max-height: 350px;">
+            <source src="paperfox.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Misión -->
+    <div class="tab-pane fade" id="mision" role="tabpanel" aria-labelledby="mision-tab" data-aos="fade-up">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 mb-4">
+          <p class="fs-5 text-secondary lh-lg">
+            Ser la papelería líder en la región, comprometidos con la innovación, el servicio excelente y la sostenibilidad, impulsando el crecimiento educativo y profesional de nuestra comunidad.
+          </p>
+        </div>
+
+        <div class="col-md-8 mb-5">
+          <!-- Barra de progreso -->
+          <label class="form-label fw-bold fs-6">Crecimiento Anual</label>
+          <div class="progress" style="height: 25px; border-radius: 15px;">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+<div class="col-md-8 mb-5 text-center">
+  <a href="sucursales.html" class="btn btn-success btn-lg px-5">Únete a PaperFox</a>
+</div>
+
+        </div>
+
+        <div class="row justify-content-center">
+  <div class="col-md-8 mb-5 text-center">
+    <video width="100%" height="auto" controls muted loop preload="metadata" class="rounded shadow-sm" style="max-height: 350px;">
+      <source src="mision.mp4" type="video/webm" />
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonios -->
+  <div class="container mt-5" data-aos="fade-up">
+    <h3 class="text-center text-primary mb-4">Testimonios</h3>
+    <div class="row justify-content-center g-5">
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 rounded" style="min-height: 200px;">
+          <p class="fst-italic text-secondary lh-lg">“Excelente atención y variedad. Siempre encuentro lo que necesito para mis proyectos.”</p>
+          <p class="fw-bold mb-0">— Ana Martínez</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 rounded" style="min-height: 200px;">
+          <p class="fst-italic text-secondary lh-lg">“Precios justos y productos de calidad. La mejor papelería de la región.”</p>
+          <p class="fw-bold mb-0">— Carlos Ruiz</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 rounded" style="min-height: 200px;">
+          <p class="fst-italic text-secondary lh-lg">“Muy buena experiencia de compra, personal amable y gran surtido.”</p>
+          <p class="fw-bold mb-0">— María López</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Modo claro/oscuro simple
+  const btn = document.getElementById('modeToggle');
+  const section = document.getElementById('objetivo-mision');
+
+  btn.addEventListener('click', () => {
+    if(section.classList.contains('bg-light')){
+      section.classList.replace('bg-light', 'bg-dark');
+      section.classList.add('text-white');
+      btn.textContent = 'Modo Claro ☀️';
+      btn.classList.replace('btn-outline-primary', 'btn-outline-light');
+    } else {
+      section.classList.replace('bg-dark', 'bg-light');
+      section.classList.remove('text-white');
+      btn.textContent = 'Modo Oscuro 🌙';
+      btn.classList.replace('btn-outline-light', 'btn-outline-primary');
+    }
+  });
+</script>
+
   <footer
           class="text-center text-lg-start text-white"
           style="background-color: #929fba"
@@ -116,21 +264,26 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
+<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+  <div class="p-3 bg-light rounded shadow-sm text-center">
+    <h6 class="text-uppercase mb-4 fw-bold text-primary">Síguenos</h6>
 
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i></a>
+    <!-- Facebook -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #3b5998" href="https://www.facebook.com/share/1KzjpuGK79/" role="button">
+      <i class="fab fa-facebook-f"></i>
+    </a>
 
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"
-          ><i class="fab fa-instagram"></i></a>
+    <!-- Instagram -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #ac2bac" href="https://www.instagram.com/cesar_aguilar948/" role="button">
+      <i class="fab fa-instagram"></i>
+    </a>
 
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <!-- Linkedin -->
+    <a class="btn btn-primary btn-floating m-1 rounded-circle shadow" style="background-color: #0082ca" href="https://www.linkedin.com/in/cesar-aguilar-7097a0340/" role="button">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
       <!-- Grid column -->
     </div>
     <!--Grid row-->
@@ -147,5 +300,14 @@
 
     <!-- Copyright -->
   </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+<script>
+  AOS.init({
+    duration: 1500, // puede ser cualquier valor
+    once: true // para que la animación ocurra solo una vez
+  });
+</script>
 </body>
 </html>

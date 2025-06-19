@@ -1,15 +1,15 @@
 <?php
 include "conexion.php";
 
-$id = $_POST["id"];
+$id = $_POST["id"] ?? 0;
 
-$sql = "DELETE FROM productos WHERE id=?";
-$stmt = $conexion->prepare($sql);
-$stmt->bind_param("i", $id);
+$sql = "DELETE FROM productos WHERE id = ?";
+$stmt = $pdo->prepare($sql);
 
-if ($stmt->execute()) {
+if ($stmt->execute([$id])) {
   echo "OK";
 } else {
-  echo "Error: " . $stmt->error;
+  $error = $stmt->errorInfo();
+  echo "Error: " . $error[2];
 }
 ?>
